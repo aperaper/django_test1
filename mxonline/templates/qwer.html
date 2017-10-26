@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+{% load my_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+    <div>{{ block.super }}123</div>
+
+    {% endblock %}
+{#{% simple_tag_multi 2 5 %}#}
+{#{{ num|filter_multi:'[1,2]' }}#}
+{#{% if num|filter_multi:30 > 100 %} {{ num|filter_multi:30 }} {% endif %}#}
+</body>
+</html>
